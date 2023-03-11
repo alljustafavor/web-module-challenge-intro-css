@@ -1,17 +1,197 @@
-/*
-*  html5resetcss
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
-ins{background-color:#ff9;color:#000;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-table{border-collapse:collapse;border-spacing:0}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
+
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Roboto+Mono:wght@400;700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+/*	border: 0; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+    
+    max-width: 100%;
+}
+
+/*General Styles*/
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body .bold {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 6.25rem;
+}
+
+section {
+    padding: 4% 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header section styles*/
+nav {
+    padding: 2% 0;
+}
+nav a{
+    display: inline-block;
+    padding: 1% 0;
+    width: 10%;
+    text-align: center;
+    border-radius:10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.orange {
+    background-color: #FF764E;
+    margin-left: 10%;
+}
+.orange:hover {
+    background-color: black;
+}
+
+.blue {
+    background-color: #5ED3EB;
+    margin:0 24%;
+}
+.blue:hover {
+    background-color: black;
+}
+
+.yellow {
+    background-color: #FFCD69;
+    margin-right: 10%;
+}
+.yellow:hover {
+    background-color: black;
+}
+
+/* title sections */
+.cta {
+    position: relative;
+}
+
+.text, .image {
+    display: inline-block;
+}
+
+.image {
+    width: 30%;
+}
+.round {
+    border-radius: 50%;
+}
+
+.image:hover {
+    border-radius: 0%;
+}
+
+.text {
+    width: 55%;
+    margin-left: 5%;
+    text-align: center;
+    line-height: 3;
+    position: absolute;
+    top: 9.375rem
+}
+
+/* Main section */
+
+.main {
+    background-color: #DDB9A3;
+    color: #fff;
+    padding: 2%;
+}
+ @keyframes main {
+    0%   {background-color: #DDB9A3; animation-timing-function: ease-in-out;}
+    25%  {background-color: #048ba8; animation-timing-function: ease-in-out;}
+    50%  {background-color: #2e4057; animation-timing-function: ease-in-out;}
+    75% {background-color: #99c24d; animation-timing-function: ease-in-out;}
+    100% {background-color: #DDB9A3; animation-timing-function: ease-in-out;}
+}
+
+.main:hover {
+    background-color: #DDB9A3;
+    animation-name: main;
+    animation-duration: 4s; 
+}
+
+/* Info Sections */
+
+.info div {
+    width: 30%;
+    margin: 5% auto;
+}
+.info img{
+    height: 100%;
+    width: 100%;
+}
+
+.bg-img {
+    background-image: url('assets/footer_img.jpg');
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+footer {
+    background-color: #F9E7DC;
+}
